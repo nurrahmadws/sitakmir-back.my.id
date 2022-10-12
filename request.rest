@@ -1,0 +1,143 @@
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name" : "Mang Adek",
+    "username": "mangad",
+    "email": "mangad@gmail.com",
+    "no_hp": "0878999801",
+    "address": "Jl. Danau Semayang",
+    "password": "pass123",
+    "confirmPassword": "pass123",
+    "role": "bendahara"
+}
+
+###
+GET http://localhost:5000/users
+
+###
+GET http://localhost:5000/users/5
+
+###
+PATCH  http://localhost:5000/users/4
+Content-Type: application/json
+
+{
+    "no_hp": "08125041300",
+    "address": "Jl. Danau Kelimutu Samping Masjid",
+    "password": "",
+    "confirmPassword": ""
+}
+
+###
+DELETE http://localhost:5000/users/6
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "uen": "matatabi",
+    "password": "pass123"
+}
+
+###
+GET http://localhost:5000/my_profile
+
+###
+DELETE http://localhost:5000/logout
+
+###
+GET http://localhost:5000/category/9/detail
+
+###
+POST http://localhost:5000/category
+Content-Type: application/json
+
+{
+    "name": "Pengeluaran",
+    "status": true
+}
+
+###
+PATCH http://localhost:5000/category/1
+Content-Type: application/json
+
+{
+    "name": "Pemasukan",
+    "status": true
+}
+
+###
+DELETE http://localhost:5000/category/2
+
+###
+GET http://localhost:5000/transaction/report
+
+###
+GET http://localhost:5000/transaction/2022-08-28/monthly_report
+
+###
+GET http://localhost:5000/inventaris
+
+###
+GET http://localhost:5000/transaction
+
+###
+POST http://localhost:5000/inventaris
+Content-Type: application/json
+
+{
+    "category_id": "3",
+    "title": "beli sembako",
+    "procurement_time": "2022-08-14",
+    "stock": "2",
+    "unit": "pcs"
+    
+}
+
+###
+PATCH http://localhost:5000/transaction/1
+Content-Type: application/json
+
+{
+    "category_id": "1"
+}
+
+###
+DELETE http://localhost:5000/transaction/1
+
+###
+GET http://localhost:5000/pengajian
+
+###
+POST http://localhost:5000/pengajian
+Content-Type: application/json
+
+{
+    "flag": "umum",
+    "title": "Mempererat Persatuan di Hari Kemerdekaan RI",
+    "presenter": "KH. Abdul Hamid M. Ag",
+    "day": "2022-08-19",
+    "location": "Masjid",
+    "description": "Acara kemerdekaan RI"
+}
+
+###
+PATCH http://localhost:5000/pengajian/1
+Content-Type: application/json
+
+{
+    "flag": "umum",
+    "title": "Mempererat Persatuan di Hari Kemerdekaan RI",
+    "presenter": "KH. Abdul Hamid M. Ag",
+    "day": "2022-08-19",
+    "location": "Masjid",
+    "description": "Acara kemerdekaan RI"
+}
+
+###
+GET http://localhost:5000/pengajian/3
+
+###
+DELETE  http://localhost:5000/pengajian/1
